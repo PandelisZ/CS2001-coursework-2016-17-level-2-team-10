@@ -27,9 +27,6 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.individual_page_layout);
 
-        //Sets the action bar of the app as the custom designed toolbar
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
         //Create Youtube Support Fragment
         YouTubePlayerSupportFragment youTubePlayerSupportFragment = (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtubepLAYER_fragment);
         youTubePlayerSupportFragment.initialize(Config.API_KEY, this);
