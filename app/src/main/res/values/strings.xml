@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SearchView</string>
+    <string-array name="array_movies">
+        <item> A Hard Days Night (1964) </item>
+        <item> Toy Story 3 (2010) </item>
+        <item> Toy Story 2 (1999) </item>
+        <item> Finding Nemo (2003) </item>
+        <item> Toy Story (1995) </item>
+        <item> The Artist (2011) </item>
+        <item> Mary Poppins (1964) </item>
+    </string-array>
+</resources>
