@@ -23,7 +23,7 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Inside Out (2015)"
+                tools:text="Inside Out (2015)"
                 android:textAlignment="center"
                 android:textSize="20sp" />
 
@@ -167,12 +167,13 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/genre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Animation, Adventure, Comedy, Drama, Family, Fantasy"
+            tools:text="Animation, Adventure, Comedy, Drama, Family, Fantasy"
             android:textSize="14sp" />
 
         <TextView
@@ -193,7 +194,7 @@
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/synopsisContent"
+            tools:text="@string/synopsisContent"
             android:textSize="14sp" />
 
         <fragment
