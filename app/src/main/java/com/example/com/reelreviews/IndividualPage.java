@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -24,11 +26,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
-
+    //Movie Id TMDB
+    private static String tmdbId = "109445";
     //Query URL that is used to get the youtube video id
-    private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/150540/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get hte movie info
-    private static String movieInfoURL = "https://api.themoviedb.org/3/movie/150540?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String movieInfoURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    //Query URL that is used to get cast members
+    private static String castInfoURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
     //String to store Youtube Video Id
     private String videoID;
     //Instance Of Youtube player
@@ -69,20 +74,21 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
             }
         });
 
-        //List of cast memebers
-        String[] castMemebersList = {
-                "Amy Poehler - Joy (voice)",
-                "Phyllis Smith - Sadness (voice)",
-                "Richard Kind - Bing Bong (voice)",
-                "Bill Hader - Fear(voice)"
-        };
+        //Calls methd that returns MovieData object with cast members
+        getCastInfo(new VolleyCallback() {
+            @Override
+            public void onSuccess(String result) {
+                //Do nothing
+            }
 
-        //Concatenates String array into a single string variable
-        String castMembers = TextUtils.join("\n", castMemebersList);
+            @Override
+            public void onSuccess(MovieData movieData) {
+                //Set cast members to respective view
+                ((TextView) findViewById(R.id.cast)).setText(TextUtils.join("\n",movieData.getCast()));
+            }
+        });
 
-        //Locates the text view to display the cast members
-        TextView castMember = (TextView) findViewById(R.id.cast);
-        castMember.setText(castMembers);
+
 
         /**
          * Listener for Share button
@@ -173,6 +179,8 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     public void getMovieInfo(final VolleyCallback callback){
         RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
 
+        final ImageLoader imageLoader = MySingleton.getsInstance().getImageLoader();
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, movieInfoURL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -186,8 +194,53 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
                         genre[i] = genreObject.getString("name");
                     }
                     String synopsis = response.getString("overview");
-                    callback.onSuccess(new MovieData(title,posterpath,genre,synopsis));
+                    MovieData movieData = new MovieData(title,posterpath,genre,synopsis);
+                    //Loads Images from url and sets the image view
+                    imageLoader.get(movieData.getPoster_path(), new ImageLoader.ImageListener() {
+                        @Override
+                        public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
+                            //Set the loaded image to respective image view
+                            ((ImageView)findViewById(R.id.thumbnail)).setImageBitmap(response.getBitmap());
+                        }
 
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            ((ImageView)findViewById(R.id.thumbnail)).setImageResource(R.drawable.image_not_available);
+                        }
+                    });
+                    callback.onSuccess(movieData);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        requestQueue.add(jsonObjectRequest);
+    }
+
+    /**
+     *Using volley to extract cast info of the movie
+     */
+    public void getCastInfo(final VolleyCallback callback){
+        RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, castInfoURL, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray cast = response.getJSONArray("cast");
+                    String[] resultCast = new String[7];
+                    for(int i = 0; i<7; i++){
+                        JSONObject members = cast.getJSONObject(i);
+                        resultCast[i] = members.getString("name") + " - "+ members.getString("character");
+                    }
+                    callback.onSuccess(new MovieData(resultCast));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

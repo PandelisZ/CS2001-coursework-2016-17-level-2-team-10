@@ -23,9 +23,9 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Inside Out (2015)"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:text="Inside Out (2015)" />
 
             <ImageView
                 android:id="@+id/thumbnail"
@@ -35,8 +35,7 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:adjustViewBounds="true"
                 android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:src="@drawable/place_holder_insideout" />
+                android:scaleType="fitXY" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -173,8 +172,8 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            tools:text="Animation, Adventure, Comedy, Drama, Family, Fantasy"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:text="Animation, Adventure, Comedy, Drama, Family, Fantasy" />
 
         <TextView
             android:layout_width="match_parent"
@@ -194,8 +193,8 @@
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            tools:text="@string/synopsisContent"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:text="@string/synopsisContent" />
 
         <fragment
             android:id="@+id/youtubepLAYER_fragment"

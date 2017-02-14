@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="87c0826a4f41ffe80aa66ee6613afae1467c3a7b">
+        sha1="5580c95f0ba8a9b0440d26d45c32ae8a543de158">
         <dex dex="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_386ae2757d3921ba3b8b26399b52662ae0db2a34/classes.dex" />
     </item>
     <item
@@ -241,7 +241,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7579be4f5eeb4919997392536275e5160e1e2080">
+        sha1="980fb96a02824026bfabadea0380853b3f0749b7">
         <dex dex="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_65901545c53a1d96de987fe91decf47fbb44e8ae/classes.dex" />
     </item>
     <item

@@ -16,12 +16,19 @@ public class MovieData {
     //Stores Movie cast members in Array object
     private String[] cast;
 
-    public MovieData(String title, String poster_path, String [] genre, String synopsis/**, String[] cast**/){
+    public MovieData(String title, String poster_path, String [] genre, String synopsis){
         this.title = title;
         this.poster_path = poster_path;
         this.genre = genre;
         this.synopsis =  synopsis;
-        //this.cast = cast;
+    }
+
+    /**]
+     * Contructor just to get the cast members
+     * @return MovieData object with only cast
+     */
+    public MovieData(String[] cast){
+        this.cast = cast;
     }
 
     public String getTitle() {
