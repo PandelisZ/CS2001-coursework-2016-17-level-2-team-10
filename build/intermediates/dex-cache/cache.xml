@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5580c95f0ba8a9b0440d26d45c32ae8a543de158">
+        sha1="e039ff779781633a449dffd167b6a8181395eb0b">
         <dex dex="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_386ae2757d3921ba3b8b26399b52662ae0db2a34/classes.dex" />
     </item>
     <item
@@ -201,6 +201,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/subam/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_6f2aa3841d9579137406475845d4d4e31ee0e02d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -241,7 +250,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="980fb96a02824026bfabadea0380853b3f0749b7">
+        sha1="61fa73271124e78d59fce917f58fcdf3af43d175">
         <dex dex="/home/subam/Documents/AndroidStudioProjects/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_65901545c53a1d96de987fe91decf47fbb44e8ae/classes.dex" />
     </item>
     <item

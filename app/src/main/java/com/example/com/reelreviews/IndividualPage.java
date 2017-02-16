@@ -15,8 +15,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
@@ -25,70 +26,34 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener {
+public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener, AsyncTaskCompleteListener<MovieData> {
     //Movie Id TMDB
-    private static String tmdbId = "109445";
+    private static String tmdbId = "20453";
     //Query URL that is used to get the youtube video id
-    private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get hte movie info
-    private static String movieInfoURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String movieInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get cast members
-    private static String castInfoURL = "https://api.themoviedb.org/3/movie/"+tmdbId+"/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
+    private static String castInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
     //String to store Youtube Video Id
     private String videoID;
     //Instance Of Youtube player
     private YouTubePlayer m_youTubePlayer;
+    //Instance of request queue
+    private RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.individual_page_layout);
 
-        //Calls method that returns youtube id from json response
-        getYoutubeVideoId_Volley(new VolleyCallback() {
-            @Override
-            public void onSuccess(MovieData movieData) {
-                //Do nothing
-            }
+        //Calls method that returns youtube id from json response and sets to respective view
+        getYoutubeVideoId_Volley();
 
-            @Override
-            public void onSuccess(String result) {
-                videoID = result;
-            }
-        });
+        //Call methods that returns movie info from json response and sets to respective view
+        getMovieInfo();
 
-        //Calls methods that returns MovieData object from json response
-        getMovieInfo(new VolleyCallback() {
-            @Override
-            public void onSuccess(String result) {
-                //Do nothing
-            }
-
-            @Override
-            public void onSuccess(MovieData movieData) {
-                //Set the title of the movie to the respective view
-                ((TextView) findViewById(R.id.title)).setText(movieData.getTitle());
-                //Set the genre of the movie to the respective view
-                ((TextView) findViewById(R.id.genre)).setText(TextUtils.join(", ",movieData.getGenre()));
-                //Set the synopsis of the movie to the respective view
-                ((TextView) findViewById(R.id.synopsis)).setText(movieData.getSynopsis());
-            }
-        });
-
-        //Calls methd that returns MovieData object with cast members
-        getCastInfo(new VolleyCallback() {
-            @Override
-            public void onSuccess(String result) {
-                //Do nothing
-            }
-
-            @Override
-            public void onSuccess(MovieData movieData) {
-                //Set cast members to respective view
-                ((TextView) findViewById(R.id.cast)).setText(TextUtils.join("\n",movieData.getCast()));
-            }
-        });
-
-
+        //Calls method that returns MovieData object with cast members and sets to respective view
+        getCastInfo();
 
         /**
          * Listener for Share button
@@ -114,10 +79,6 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
                 startActivity(optionInflator);
             }
         });
-
-        //Create Youtube Support Fragment
-        YouTubePlayerSupportFragment youTubePlayerSupportFragment = (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtubepLAYER_fragment);
-        youTubePlayerSupportFragment.initialize(Config.API_KEY, this);
 
     }
 
@@ -146,21 +107,12 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     /**
      * Using volley to extract youtube video id data
      */
-    public void  getYoutubeVideoId_Volley(final VolleyCallback callback) {
-        RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
+    public void getYoutubeVideoId_Volley() {
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, youtubeQueryURL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
-                    JSONArray itemArray = response.getJSONArray("results");
-                    JSONObject firstItem = itemArray.getJSONObject(0);
-                    String youtube_id = firstItem.getString("key");
-                    callback.onSuccess(youtube_id);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
+                new ParseNetworkResponseAsync(IndividualPage.this, IndividualPage.this).execute(response);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -176,43 +128,12 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
      * Using Volley to extract movie data(synopse, genre, ...)
      */
 
-    public void getMovieInfo(final VolleyCallback callback){
-        RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
-
-        final ImageLoader imageLoader = MySingleton.getsInstance().getImageLoader();
+    public void getMovieInfo() {
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, movieInfoURL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
-                    String title = response.getString("title");
-                    String posterpath = "https://image.tmdb.org/t/p/w500"+ response.getString("poster_path");
-                    JSONArray genreJson = response.getJSONArray("genres");
-                    String [] genre = new String[genreJson.length()];
-                    for(int i = 0; i< genreJson.length(); i++){
-                        JSONObject genreObject = genreJson.getJSONObject(i);
-                        genre[i] = genreObject.getString("name");
-                    }
-                    String synopsis = response.getString("overview");
-                    MovieData movieData = new MovieData(title,posterpath,genre,synopsis);
-                    //Loads Images from url and sets the image view
-                    imageLoader.get(movieData.getPoster_path(), new ImageLoader.ImageListener() {
-                        @Override
-                        public void onResponse(ImageLoader.ImageContainer response, boolean isImmediate) {
-                            //Set the loaded image to respective image view
-                            ((ImageView)findViewById(R.id.thumbnail)).setImageBitmap(response.getBitmap());
-                        }
-
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            ((ImageView)findViewById(R.id.thumbnail)).setImageResource(R.drawable.image_not_available);
-                        }
-                    });
-                    callback.onSuccess(movieData);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                new ParseNetworkResponseAsync(IndividualPage.this, IndividualPage.this).execute(response);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -225,25 +146,15 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     }
 
     /**
-     *Using volley to extract cast info of the movie
+     * Using volley to extract cast info of the movie
      */
-    public void getCastInfo(final VolleyCallback callback){
-        RequestQueue requestQueue = MySingleton.getsInstance().getmRequestQueue();
+    public void getCastInfo(/*final VolleyCallback callback*/) {
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, castInfoURL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
-                    JSONArray cast = response.getJSONArray("cast");
-                    String[] resultCast = new String[7];
-                    for(int i = 0; i<7; i++){
-                        JSONObject members = cast.getJSONObject(i);
-                        resultCast[i] = members.getString("name") + " - "+ members.getString("character");
-                    }
-                    callback.onSuccess(new MovieData(resultCast));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+
+                new ParseNetworkResponseAsync(IndividualPage.this, IndividualPage.this).execute(response);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -253,15 +164,46 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
         });
 
         requestQueue.add(jsonObjectRequest);
+    }
+
+    /**
+     * Returns Object from async task
+     *
+     * @param result The resulting object from the AsyncTask.
+     */
+    @Override
+    public void onTaskComplete(MovieData result) {
+        //Set cast members to respective view
+        if (result.getTitle() == null && result.getYoutubeId() == null) {
+            //Set cast members to respective View
+            ((TextView) findViewById(R.id.cast)).setText(TextUtils.join("\n", result.getCast()));
+        } else if (result.getYoutubeId() == null) {
+            //Set the title of the movie to the respective view
+            ((TextView) findViewById(R.id.title)).setText(result.getTitle());
+            //Set Image to respective image view
+            Glide.with(this).load(result.getPoster_path()).diskCacheStrategy(DiskCacheStrategy.ALL).into((ImageView)findViewById(R.id.thumbnail));
+            //Set the genre of the movie to the respective view
+            ((TextView) findViewById(R.id.genre)).setText(TextUtils.join(", ",result.getGenre()));
+            //Set the synopsis of the movie to the respective view
+            ((TextView) findViewById(R.id.synopsis)).setText(result.getSynopsis());
+
+        }
+
+        else {
+
+            videoID = result.getYoutubeId();
+            Toast.makeText(this, videoID, Toast.LENGTH_SHORT).show();
+            //Create Youtube Support Fragment
+            YouTubePlayerSupportFragment youTubePlayerSupportFragment = (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtubepLAYER_fragment);
+            youTubePlayerSupportFragment.initialize(Config.API_KEY, this);
+        }
     }
 
     /**
      * Volley call back interface to return values from listener interface
      */
 
-    public interface VolleyCallback{
+    public interface VolleyCallback {
         void onSuccess(String result);
-        void onSuccess(MovieData movieData);
     }
-
 }

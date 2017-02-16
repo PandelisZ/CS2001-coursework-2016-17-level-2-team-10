@@ -15,6 +15,8 @@ public class MovieData {
     private String synopsis;
     //Stores Movie cast members in Array object
     private String[] cast;
+    //Stores Youtube Id
+    private String youtubeId;
 
     public MovieData(String title, String poster_path, String [] genre, String synopsis){
         this.title = title;
@@ -24,11 +26,23 @@ public class MovieData {
     }
 
     /**]
-     * Contructor just to get the cast members
+     * Contructor just to set the cast members
      * @return MovieData object with only cast
      */
     public MovieData(String[] cast){
         this.cast = cast;
+    }
+
+    /**
+     * Constructor just set Youtube id
+     * @param id youtube id;
+     */
+    public MovieData(String id){
+        this.youtubeId = id;
+    }
+
+    public String getYoutubeId() {
+        return youtubeId;
     }
 
     public String getTitle() {
