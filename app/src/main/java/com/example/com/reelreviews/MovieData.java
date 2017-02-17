@@ -17,6 +17,12 @@ public class MovieData {
     private String[] cast;
     //Stores Youtube Id
     private String youtubeId;
+    //Stroes imdb rating
+    private  String imdbRating;
+    //Stores rotten tomatoes rating
+    private String rottentomatoesRating;
+    //Stroes meta critic rating
+    private String metacritcRating;
 
     public MovieData(String title, String poster_path, String [] genre, String synopsis){
         this.title = title;
@@ -41,6 +47,15 @@ public class MovieData {
         this.youtubeId = id;
     }
 
+    /**
+     * contructor to initialise ratings for the movie object
+     */
+    public MovieData(String imdbRating, String rottentomatoesRating, String metacritcRating){
+        this.imdbRating = imdbRating;
+        this.rottentomatoesRating = rottentomatoesRating;
+        this.metacritcRating = metacritcRating;
+    }
+
     public String getYoutubeId() {
         return youtubeId;
     }
@@ -63,5 +78,17 @@ public class MovieData {
 
     public String[] getCast() {
         return cast;
+    }
+
+    public String getImdbRating() {
+        return imdbRating;
+    }
+
+    public String getRottentomatoesRating() {
+        return rottentomatoesRating;
+    }
+
+    public String getMetacritcRating() {
+        return metacritcRating;
     }
 }

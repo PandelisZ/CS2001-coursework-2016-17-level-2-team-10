@@ -22,19 +22,22 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener, AsyncTaskCompleteListener<MovieData> {
+    //Search can be used using both imdb id and tmdb id
     //Movie Id TMDB
-    private static String tmdbId = "20453";
+    private static String tmdbId = "tt0468569";
+    //Imdb id
+    private static String imdbID = "tt0468569";
     //Query URL that is used to get the youtube video id
     private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get hte movie info
     private static String movieInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get cast members
     private static String castInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
+    //Query URL that is used to get ratings
+    private static String ratingURL = "http://www.omdbapi.com/?i=" + imdbID + "&plot=short&r=json&tomatoes=true";
     //String to store Youtube Video Id
     private String videoID;
     //Instance Of Youtube player
@@ -51,6 +54,9 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
 
         //Call methods that returns movie info from json response and sets to respective view
         getMovieInfo();
+
+        //Calls methods to extract ratings
+        getRatings();
 
         //Calls method that returns MovieData object with cast members and sets to respective view
         getCastInfo();
@@ -125,6 +131,28 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     }
 
     /**
+     * Using Volley to extract ratings from omdb api
+     */
+    public void getRatings() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, ratingURL, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                new ParseNetworkResponseAsync(IndividualPage.this, IndividualPage.this).execute(response);
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        requestQueue.add(jsonObjectRequest);
+    }
+
+
+    /**
      * Using Volley to extract movie data(synopse, genre, ...)
      */
 
@@ -148,7 +176,7 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     /**
      * Using volley to extract cast info of the movie
      */
-    public void getCastInfo(/*final VolleyCallback callback*/) {
+    public void getCastInfo() {
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, castInfoURL, null, new Response.Listener<JSONObject>() {
             @Override
@@ -172,38 +200,36 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
      * @param result The resulting object from the AsyncTask.
      */
     @Override
-    public void onTaskComplete(MovieData result) {
+    public void onTaskComplete(final MovieData result) {
         //Set cast members to respective view
-        if (result.getTitle() == null && result.getYoutubeId() == null) {
+        if (result.getTitle() == null && result.getYoutubeId() == null && result.getImdbRating() == null) {
             //Set cast members to respective View
             ((TextView) findViewById(R.id.cast)).setText(TextUtils.join("\n", result.getCast()));
-        } else if (result.getYoutubeId() == null) {
+        } else if (result.getYoutubeId() == null && result.getImdbRating()==null) {
             //Set the title of the movie to the respective view
             ((TextView) findViewById(R.id.title)).setText(result.getTitle());
             //Set Image to respective image view
-            Glide.with(this).load(result.getPoster_path()).diskCacheStrategy(DiskCacheStrategy.ALL).into((ImageView)findViewById(R.id.thumbnail));
+            Glide.with(this).load(result.getPoster_path()).diskCacheStrategy(DiskCacheStrategy.ALL).into((ImageView) findViewById(R.id.thumbnail));
             //Set the genre of the movie to the respective view
-            ((TextView) findViewById(R.id.genre)).setText(TextUtils.join(", ",result.getGenre()));
+            ((TextView) findViewById(R.id.genre)).setText(TextUtils.join(", ", result.getGenre()));
             //Set the synopsis of the movie to the respective view
             ((TextView) findViewById(R.id.synopsis)).setText(result.getSynopsis());
-
         }
-
+        else if (result.getImdbRating() != null){
+            //Set imdb rating to respective View
+            ((TextView) findViewById(R.id.imdb)).setText(result.getImdbRating());
+            //Set rotten tomatoes rating to respective View
+            ((TextView) findViewById(R.id.rottenTomatoes)).setText(result.getRottentomatoesRating());
+            //Set metacritic rating rating to respective View
+            ((TextView) findViewById(R.id.metacritic)).setText(result.getMetacritcRating());
+        }
         else {
 
             videoID = result.getYoutubeId();
-            Toast.makeText(this, videoID, Toast.LENGTH_SHORT).show();
             //Create Youtube Support Fragment
             YouTubePlayerSupportFragment youTubePlayerSupportFragment = (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.youtubepLAYER_fragment);
             youTubePlayerSupportFragment.initialize(Config.API_KEY, this);
         }
     }
 
-    /**
-     * Volley call back interface to return values from listener interface
-     */
-
-    public interface VolleyCallback {
-        void onSuccess(String result);
-    }
 }

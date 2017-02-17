@@ -21,7 +21,6 @@ public class ParseNetworkResponseAsync extends AsyncTask<JSONObject, Void, Movie
 
     private Context context;
     private AsyncTaskCompleteListener<MovieData> listener;
-    private AsyncTaskCompleteListener<String> stringAsyncTaskCompleteListener;
 
     public ParseNetworkResponseAsync(Context context, AsyncTaskCompleteListener<MovieData> listener) {
         this.context = context;
@@ -65,6 +64,15 @@ public class ParseNetworkResponseAsync extends AsyncTask<JSONObject, Void, Movie
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+        } else if (params[0].has("Metascore")) {
+            try {
+                String imdb = params[0].getString("imdbRating");
+                String rottenTomatoes = params[0].getString("tomatoMeter");
+                String metacritic = params[0].getString("Metascore");
+                return new MovieData(imdb, rottenTomatoes, metacritic);
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
         } else {
