@@ -58,7 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="Reel Rating - "
+                        android:text="@string/reel_rating"
                         android:textSize="16sp" />
 
                     <TextView
@@ -66,7 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="90"
+                        tools:text="90"
                         android:textSize="16sp" />
                 </LinearLayout>
 
@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="Rotten Tomatoes - "
+                        android:text="@string/rotten_tomatoes"
                         android:textSize="16sp" />
 
                     <TextView
@@ -88,7 +88,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="60"
+                        tools:text="60"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -103,7 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="Metacritic - "
+                        android:text="@string/metacritic"
                         android:textSize="16sp" />
 
                     <TextView
@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="30"
+                        tools:text="30"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -127,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="IMDB - "
+                        android:text="@string/imdb"
                         android:textSize="16sp" />
 
                     <TextView
@@ -135,7 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        android:text="30"
+                        tools:text="30"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -162,7 +162,7 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Genre"
+            android:text="@string/genre"
             android:textSize="20sp" />
 
         <TextView
@@ -181,7 +181,7 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Synopsis"
+            android:text="@string/synopsis"
             android:textSize="20sp" />
 
         <TextView
@@ -209,9 +209,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="Cast"
-            android:textSize="20dp" />
+            android:text="@string/cast"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/cast"

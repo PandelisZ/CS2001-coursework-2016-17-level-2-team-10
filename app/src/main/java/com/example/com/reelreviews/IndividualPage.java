@@ -27,9 +27,9 @@ import org.json.JSONObject;
 public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener, AsyncTaskCompleteListener<MovieData> {
     //Search can be used using both imdb id and tmdb id
     //Movie Id TMDB
-    private static String tmdbId = "tt0468569";
+    private static String tmdbId = "tt3783958";
     //Imdb id
-    private static String imdbID = "tt0468569";
+    private static String imdbID = tmdbId   ;
     //Query URL that is used to get the youtube video id
     private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
     //Query URL that is used to get hte movie info
@@ -222,6 +222,10 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
             ((TextView) findViewById(R.id.rottenTomatoes)).setText(result.getRottentomatoesRating());
             //Set metacritic rating rating to respective View
             ((TextView) findViewById(R.id.metacritic)).setText(result.getMetacritcRating());
+            //Set the reel rating by calculating the average of different sources
+            double reelSum =  (Double.valueOf(result.getImdbRating())*100/10)+Double.valueOf(result.getRottentomatoesRating())+Double.valueOf(result.getMetacritcRating());
+            double reelRating = reelSum/3;
+            ((TextView) findViewById(R.id.reelreview)).setText(String.valueOf((int)reelRating));
         }
         else {
 
