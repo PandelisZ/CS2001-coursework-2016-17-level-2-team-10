@@ -9,5 +9,8 @@
 
 .icon-searchPage {
   font-size:50px;
-  color:#2196F3;
+   background: -webkit-linear-gradient(to left, #2196F3, #90CAF9);
+  background: linear-gradient(to left, #2196F3, #90CAF9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
