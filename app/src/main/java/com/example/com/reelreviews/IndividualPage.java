@@ -217,7 +217,7 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
         }
         else if (result.getImdbRating() != null){
             //Set imdb rating to respective View
-            ((TextView) findViewById(R.id.imdb)).setText(result.getImdbRating());
+            ((TextView) findViewById(R.id.imdb)).setText(String.valueOf((int) (Double.valueOf(result.getImdbRating()) * 10)));
             //Set rotten tomatoes rating to respective View
             ((TextView) findViewById(R.id.rottenTomatoes)).setText(result.getRottentomatoesRating());
             //Set metacritic rating rating to respective View
