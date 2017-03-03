@@ -66,8 +66,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        tools:text="90"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:text="90" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -88,8 +88,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        tools:text="60"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:text="60" />
 
                 </LinearLayout>
 
@@ -111,8 +111,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        tools:text="30"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:text="30" />
 
                 </LinearLayout>
 
@@ -135,8 +135,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
-                        tools:text="30"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        tools:text="30" />
 
                 </LinearLayout>
 
@@ -218,6 +218,7 @@
             android:id="@+id/cast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
