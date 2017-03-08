@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
          b.setAdapter(adapter);
 
-        //test 
-
     }
 
     @Override
