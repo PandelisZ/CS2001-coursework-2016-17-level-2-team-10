@@ -37,7 +37,7 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
     //Query URL that is used to get cast members
     private static String castInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
     //Query URL that is used to get ratings
-    private static String ratingURL = "http://www.omdbapi.com/?i=" + imdbID + "&plot=short&r=json&tomatoes=true";
+    private static String ratingURL = "http://www.omdbapi.com/?i="+imdbID+"&tomatoes=true";
     //String to store Youtube Video Id
     private String videoID;
     //Instance Of Youtube player
