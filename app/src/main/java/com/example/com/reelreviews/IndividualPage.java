@@ -223,8 +223,16 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
             //Set metacritic rating rating to respective View
             ((TextView) findViewById(R.id.metacritic)).setText(result.getMetacritcRating());
             //Set the reel rating by calculating the average of different sources
-            double reelSum =  (Double.valueOf(result.getImdbRating())*100/10)+Double.valueOf(result.getRottentomatoesRating())+Double.valueOf(result.getMetacritcRating());
-            double reelRating = reelSum/3;
+            double reelRating = 0;
+            //Check rotten tomatoes return value before calculating the average
+            if (result.getRottentomatoesRating().equals("N/A")){
+                double reelSum =  (Double.valueOf(result.getImdbRating())*100/10)+Double.valueOf(result.getMetacritcRating());
+                reelRating = reelSum/2;
+            }
+            else {
+                double reelSum =  (Double.valueOf(result.getImdbRating())*100/10)+Double.valueOf(result.getRottentomatoesRating())+Double.valueOf(result.getMetacritcRating());
+                reelRating = reelSum/3;
+            }
             ((TextView) findViewById(R.id.reelreview)).setText(String.valueOf((int)reelRating));
         }
         else {
