@@ -36,7 +36,7 @@ public class MovieDetailActivity extends AppCompatActivity {
             //Showing image from the movie db api into imageview using glide library
             Glide.with(this).load("https://image.tmdb.org/t/p/w500/"+ details.getPoster_path()).into(image);
             title.setText(details.getOriginal_title());
-            date.setText(details.getRelease_date());
+            date.setText(details.getImdb_id());
             rating.setText(Double.toString(details.getVote_average()));
             overview.setText(details.getOverview());
         }

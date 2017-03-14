@@ -1,12 +1,19 @@
 package com.asimghafoor.example.HomepageBackend;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 
 
-public class MovieDetails  implements Serializable{
+public class MovieDetails  implements Serializable {
+
+    private String imdb_id;
+
+    private String tmdb_id;
 
     private String original_title;
-    
+
     private String overview;
 
     private String release_date;
@@ -52,7 +59,37 @@ public class MovieDetails  implements Serializable{
     }
 
     public void setVote_average(double vote_average) {
-        this.vote_average = vote_average;
+        this.vote_average = vote_average;}
+
+    public String getTmdb_id() {
+        return tmdb_id;
     }
-    
+
+    public void setTmdb_id(String tmdb_id) {
+        this.tmdb_id = tmdb_id;
+    }
+
+    public String getImdb_id() {
+        return imdb_id;
+    }
+
+    public void setImdb_id(String imdb_id) {
+        this.imdb_id = imdb_id;
+    }
+
+    //    public String movieName, movieYear, genre, director, writer, actors, plot, language, imdbRating;
+//    public void mapJson(String jsonData) throws JSONException {
+//
+//        JSONObject movieData = new JSONObject(jsonData);
+//        movieName = "Movie: " + movieData.getString("Title");
+//        movieYear = "Year: " + movieData.getString("Year");
+//        genre = "Genre: " + movieData.getString("Genre");
+//        director = "Director: " + movieData.getString("Director");
+//        writer = "Writer:" + movieData.getString("Writer");
+//        actors = "Actors: " + movieData.getString("Actors");
+//        plot = "Plot: " + movieData.getString("Plot");
+//        language = "Language: " + movieData.getString("Language");
+//        imdbRating = "IMDB Rating: " + movieData.getString("imdbRating");
+//
+//    }
 }
