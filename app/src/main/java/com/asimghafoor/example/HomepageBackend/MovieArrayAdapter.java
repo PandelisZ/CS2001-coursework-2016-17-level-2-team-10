@@ -37,10 +37,10 @@ public class MovieArrayAdapter extends ArrayAdapter {
 
         MovieDetails details = movieDetailsList.get(position);
 
-        View view = LayoutInflater.from(context).inflate(resource,parent,false);
+        View view = LayoutInflater.from(context).inflate(resource, parent, false);
 
         TextView movieName = (TextView) view.findViewById(R.id.textView);
-        TextView movieRating = (TextView)view.findViewById(R.id.textView2);
+        TextView movieRating = (TextView) view.findViewById(R.id.textView2);
         TextView imdbID = (TextView) view.findViewById(R.id.textView3);
         ImageView image = (ImageView) view.findViewById(R.id.imageView);
 
@@ -51,10 +51,9 @@ public class MovieArrayAdapter extends ArrayAdapter {
         imdbID.setText(details.getImdb_id());
 
 
+        Glide.with(context).load("https://image.tmdb.org/t/p/w500/" + details.getPoster_path()).into(image);
 
-        Glide.with(context).load("https://image.tmdb.org/t/p/w500/"+ details.getPoster_path()).into(image);
-
-        return  view;
+        return view;
     }
 
     @Nullable

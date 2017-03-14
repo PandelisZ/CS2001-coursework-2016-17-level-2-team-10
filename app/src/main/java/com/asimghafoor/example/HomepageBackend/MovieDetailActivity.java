@@ -22,19 +22,18 @@ public class MovieDetailActivity extends AppCompatActivity {
 
         title = (TextView) findViewById(R.id.title);
 
-        date = (TextView)findViewById(R.id.date);
+        date = (TextView) findViewById(R.id.date);
 
-        rating = (TextView)findViewById(R.id.rating);
+        rating = (TextView) findViewById(R.id.rating);
 
         overview = (TextView) findViewById(R.id.overview);
 
         //Getting the value from bundle, means the value which we had during switching to this activity from main activity
         MovieDetails details = (MovieDetails) getIntent().getExtras().getSerializable("MOVIE_DETAILS");
 
-        if(details !=null)
-        {
+        if (details != null) {
             //Showing image from the movie db api into imageview using glide library
-            Glide.with(this).load("https://image.tmdb.org/t/p/w500/"+ details.getPoster_path()).into(image);
+            Glide.with(this).load("https://image.tmdb.org/t/p/w500/" + details.getPoster_path()).into(image);
             title.setText(details.getOriginal_title());
             date.setText(details.getImdb_id());
             rating.setText(Double.toString(details.getVote_average()));

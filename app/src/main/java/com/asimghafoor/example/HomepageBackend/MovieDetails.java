@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.io.Serializable;
 
 
-public class MovieDetails  implements Serializable {
+public class MovieDetails implements Serializable {
 
     private String imdb_id;
 
@@ -59,7 +59,8 @@ public class MovieDetails  implements Serializable {
     }
 
     public void setVote_average(double vote_average) {
-        this.vote_average = vote_average;}
+        this.vote_average = vote_average;
+    }
 
     public String getTmdb_id() {
         return tmdb_id;
