@@ -27,17 +27,17 @@ import org.json.JSONObject;
 public class IndividualPage extends AppCompatActivity implements YouTubePlayer.OnInitializedListener, AsyncTaskCompleteListener<MovieData> {
     //Search can be used using both imdb id and tmdb id
     //Movie Id TMDB
-    private static String tmdbId = "tt3783958";
+    private static String tmdbId;
     //Imdb id
-    private static String imdbID = tmdbId   ;
+    private static String imdbID;
     //Query URL that is used to get the youtube video id
-    private static String youtubeQueryURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String youtubeQueryURL;
     //Query URL that is used to get hte movie info
-    private static String movieInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+    private static String movieInfoURL;
     //Query URL that is used to get cast members
-    private static String castInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
+    private static String castInfoURL;
     //Query URL that is used to get ratings
-    private static String ratingURL = "http://www.omdbapi.com/?i="+imdbID+"&tomatoes=true";
+    private static String ratingURL;
     //String to store Youtube Video Id
     private String videoID;
     //Instance Of Youtube player
