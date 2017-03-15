@@ -2,184 +2,166 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_835bbdd99c4615dd8bd73d74a3b1dd5b5d76e875\classes.dex" />
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi_835bbdd99c4615dd8bd73d74a3b1dd5b5d76e875.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_476894b56a051afa24553bb27dc484681c95c442\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.volley-volley-1.0.0_9a8c8b9c050619a1551e132bf505e8363b1425d5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_07a00cf30854485322a32117ef7636bebdb1fd54\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_c22ca52af2b8e6ffce3990117b140b73f6fe5380\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e9709eaad1af0ba0d39e180e4e055841df3ef773">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_170d73d05b7ae687dcd253fcd4b2500d6e7b9754\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_090e2a1d8552aa836fa1b87bdaa44474b69916cd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_4a4b11686dbd12a2b9a766614d73086669944d26\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_c81cc8d57d7f41e70b76e3b560e82b0c4c9cd428\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_e0062546ec75148c5fc38daed131bfab6cbd9ff1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_f26405dd79815e8c74162609e6a25af7ec35657a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_73dd4b2f7f0116b2fc4afe0d552271401aab9df0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_8e4d8fef68ebb8f8bd3efe1025f4405bff77093e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_3ecbacf34b6a80486a02833eefad1e53c49a69c8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_b24adcc8ac75d2d2d20dae71a5d83b6d6b8cca96\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_875c651372a07b71f13f443627da4f93acf64fb7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7f75aa0bae66c4368985859de0234579650f5f41">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e9ef463a5256d3682dd85fd7aa9e34652d171e53\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\subam\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\subam\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_3e21f0e4b48e4a26e7fc85033eac10c8b0f4ac6c\classes.dex" />
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_cf14e943eb5563091a2a3b400c463e2eaa68ff71.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_07a00cf30854485322a32117ef7636bebdb1fd54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_476894b56a051afa24553bb27dc484681c95c442.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.volley-volley-1.0.0_9a8c8b9c050619a1551e132bf505e8363b1425d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\glide-3.7.0_c22ca52af2b8e6ffce3990117b140b73f6fe5380.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.1_4a4b11686dbd12a2b9a766614d73086669944d26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.1_090e2a1d8552aa836fa1b87bdaa44474b69916cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_c81cc8d57d7f41e70b76e3b560e82b0c4c9cd428.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_e0062546ec75148c5fc38daed131bfab6cbd9ff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.1_73dd4b2f7f0116b2fc4afe0d552271401aab9df0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_8e4d8fef68ebb8f8bd3efe1025f4405bff77093e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_b24adcc8ac75d2d2d20dae71a5d83b6d6b8cca96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.1_875c651372a07b71f13f443627da4f93acf64fb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_3ecbacf34b6a80486a02833eefad1e53c49a69c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_f26405dd79815e8c74162609e6a25af7ec35657a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_cb85e2420c0e8ac8c1c5a861f67faf2873962fb5\classes.dex" />
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_cb85e2420c0e8ac8c1c5a861f67faf2873962fb5.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_f093ad80bc16ecd89088e2f8f8696278f8d6b90a\classes.dex" />
+        <dex dex="C:\Users\subam\Documents\AndroidStudioProjects\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_f093ad80bc16ecd89088e2f8f8696278f8d6b90a.jar" />
     </item>
 
 </items>
