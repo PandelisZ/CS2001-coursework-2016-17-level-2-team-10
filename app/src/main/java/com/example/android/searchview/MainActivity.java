@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // connection to backend server
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
