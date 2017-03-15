@@ -1,4 +1,4 @@
-package com.asimghafoor.example.HomepageBackend;
+package com.example.com.reelreviews;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

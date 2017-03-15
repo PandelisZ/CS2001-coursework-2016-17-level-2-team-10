@@ -1,4 +1,4 @@
-package com.asimghafoor.example.HomepageBackend;
+package com.example.com.reelreviews;
 
 import org.junit.Test;
 

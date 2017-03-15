@@ -1,4 +1,4 @@
-package com.asimghafoor.example.HomepageBackend;
+package com.example.com.reelreviews;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -120,6 +119,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         }
                     }).execute("https://api.themoviedb.org/3/movie/" + tmdbID + "?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US");
 
+
+
                     movieList.add(movieDetails);
 
                 }
@@ -199,6 +200,75 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //Reading JSON object at 'i'th position of JSON Array
 
                 String imdbID = jsonObject.getString("imdb_id");
+                // Toast.makeText(MainActivity.this, imdbID, Toast.LENGTH_SHORT).show();
+                imdbAsyncResponse.getImdbId(imdbID);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    class omdb extends AsyncTask<String, Void, String> {
+
+
+        public ImdbAsyncResponse imdbAsyncResponse = null;
+
+        public omdb(ImdbAsyncResponse imdbAsyncResponse) {
+            this.imdbAsyncResponse = imdbAsyncResponse;
+        }
+
+        //This method will run on UIThread and it will execute before doInBackground
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        //This method will run on background thread and after completion it will return result to onPostExecute
+        @Override
+        protected String doInBackground(String... params) {
+            URL url = null;
+            try {
+//As we are passing just one parameter to AsyncTask, so used param[0] to get value at 0th position that is URL
+                url = new URL(params[0]);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            try {
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+//Getting inputstream from connection, that is response which we got from server
+                InputStream inputStream = urlConnection.getInputStream();
+//Reading the response
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String s = bufferedReader.readLine();
+                bufferedReader.close();
+//Returning the response message to onPostExecute method
+                return s;
+            } catch (IOException e) {
+                Log.e("Error: ", e.getMessage(), e);
+            }
+            return null;
+        }
+
+        //This method runs on UIThread and it will execute when doInBackground is completed
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            JSONObject jsonObject = null;
+            try {
+
+//Parent JSON Object. Json object start at { and end at }
+                jsonObject = new JSONObject(s);
+
+
+//JSON Array of parent JSON object. Json array starts from [ and end at ]
+                //JSONArray jsonArray = jsonObject.getJSONArray("results");
+
+//Reading JSON object inside Json array
+
+
+//Reading JSON object at 'i'th position of JSON Array
+
+                String imdbID = jsonObject.getString("imdbRating");
                 // Toast.makeText(MainActivity.this, imdbID, Toast.LENGTH_SHORT).show();
                 imdbAsyncResponse.getImdbId(imdbID);
 

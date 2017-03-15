@@ -1,4 +1,4 @@
-package com.asimghafoor.example.HomepageBackend;
+package com.example.com.reelreviews;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

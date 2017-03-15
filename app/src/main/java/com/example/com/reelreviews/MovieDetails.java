@@ -1,7 +1,4 @@
-package com.asimghafoor.example.HomepageBackend;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+package com.example.com.reelreviews;
 
 import java.io.Serializable;
 
