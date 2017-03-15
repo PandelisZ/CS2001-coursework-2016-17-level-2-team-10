@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Search Movie");
+        setTitle("Search movie");
 
         final SearchView search = (SearchView) findViewById(R.id.search);
 
