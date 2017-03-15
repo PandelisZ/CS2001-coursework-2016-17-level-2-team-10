@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         //Moving to MovieDetailsActivity from MainActivity. Sending the MovieDetails object from one activity to another activity
-        Intent intent = new Intent(this, MovieDetailActivity.class);
+        Intent intent = new Intent(this, IndividualPage.class);
         intent.putExtra("MOVIE_DETAILS", (MovieDetails) parent.getItemAtPosition(position));
         startActivity(intent);
 

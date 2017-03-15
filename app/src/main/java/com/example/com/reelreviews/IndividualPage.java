@@ -47,6 +47,22 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MovieDetails details = (MovieDetails) getIntent().getExtras().getSerializable("MOVIE_DETAILS");
+
+        tmdbId = details.getImdb_id();
+        //Imdb id
+        imdbID = tmdbId   ;
+        //Query URL that is used to get the youtube video id
+        youtubeQueryURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/videos?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+        //Query URL that is used to get hte movie info
+        movieInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US";
+        //Query URL that is used to get cast members
+        castInfoURL = "https://api.themoviedb.org/3/movie/" + tmdbId + "/credits?api_key=b100be8111f00affe3773ea55d4b47d3";
+        //Query URL that is used to get ratings
+        ratingURL = "http://www.omdbapi.com/?i="+imdbID+"&tomatoes=true";
+
+
         setContentView(R.layout.individual_page_layout);
 
         //Calls method that returns youtube id from json response and sets to respective view
