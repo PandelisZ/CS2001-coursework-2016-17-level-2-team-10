@@ -48,12 +48,8 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
         holder.rating.setText(movielist.getRating());
         holder.rottenTomatoesRating.setText(movielist.getRottenTomatoesRating());
         holder.metacriticRating.setText(movielist.getMetacriticRating());
-        if(!"N/A".equals(movielist.getImdbRating())) {
-            double imdbDouble = Double.parseDouble(movielist.getImdbRating());
-            String imdbRating = String.valueOf((int)(imdbDouble * 10));
-            holder.imdbRating.setText(imdbRating);
-        }
-
+        holder.imdbRating.setText(movielist.getImdbRating());
+        
         Picasso.with(context)
                 .load(movielist.getPoster())
                 .resize(100, 150)

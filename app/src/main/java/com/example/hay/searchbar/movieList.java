@@ -42,7 +42,12 @@ public class movieList {
         metacriticRating = id;
     }
     public String getImdbRating(){
+        if(!"N/A".equals(imdbRating)){
+            double imdbDouble = Double.parseDouble(imdbRating);
+            return String.valueOf((int)(imdbDouble * 10));
+        }else{
             return imdbRating;
+        }
     }
     public void setImdbRating(String id){
         imdbRating = id;
