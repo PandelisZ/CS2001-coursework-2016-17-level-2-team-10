@@ -2,166 +2,184 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.0_28f0cc7e96186a058387ff43e71077c213d84c4f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.0_5f6831f1e47df45637d0aa733d2379bdaeca4d13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\picasso-2.4.0_6406a03bc83268168d592d536db2a8e1d7269201.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.2_75e7ade18a64a1e5e24112ffad539b41796e7f24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.0_95e60f07b7ad1fa8071d4c70331cc6961bd413e0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.1.0_4e5c4ea219585b450a7bdba4541bc564e92eedba.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.0_8b554e7445fda6460f23df99d7b3793875590361.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.0_a546771d70697bf0bb198187c6424268318c5d69.jar" />
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.1.0_fd5b4f01e11fad38ad91aa8bad5f27aadf908e2c/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Hay\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.0_5079dca10ccea99696974ea0e3b624e4b00d4bca.jar" />
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.0_e6568ccdb7fb19ef78f185fe4c80b4e8e841eac8/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/asimghafoor/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.0_9091d31885909f9ecfdde531b2f2d4d93e5ede76.jar" />
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.4.0_eaf80deba3b96e197f7e31057d787d5c2847a971/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Hay\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\glide-3.7.0_4c0ac52423d7bff9950f5f93f7459381eb7e8d3c.jar" />
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_c5e26c9930a98150afeb3d109a4408a141a58a6e/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\Hay\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_9f4ec74782dfe7b1a62ebf301d68824e5ae9068a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.0_882763973d9b1dd169272930b76657fcbc2feec2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.0_7ba3564210b2e03ba02a6f623b39663e5612bf93.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.0_c719cea42ee3558577164d3300efd1330fdf5ac3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.0_49b2ceefbb1a64f3845019bb0fa34be823c2efbe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\exploded-aar\com.android.volley\volley\1.0.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\com.android.volley-volley-1.0.0_cf58412bd652681df431f338a074baed7aae8015.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
-        <dex dex="C:\Users\Hay\Desktop\fullApp\CS2001-coursework-2016-17-level-2-team-10\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi_102d32f99916c3222dcb32623227a4af97d16260.jar" />
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/2/YouTubeAndroidPlayerApi_3c3c847908b0e59aa4e0833c244c10fca37a34a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.0_72b5a1af6f63ce632d8e86da374d749a89435ebb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.0_c670789e67e208b2f417d1185b5539fa8caa7c2c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_48dcec7f48e00d4060b71d0d31e3f93c1eb720be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2da55a1f259122f9a80b2ca3b40912479c2199aa">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c2b1ff761ff0963b1e31c2e5ebfb77ad26daa121/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.0_1bb5ac6840e193573927ca2b34546bae4e21d7fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.2_cc32b25ab5de7d02cb50a2ac3fd4aaf7a78acf98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-volley-1.0.0_4457400de0aa105a40adc861945c32ac173c71bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.0_8024d71ad5d8e0c92946111302806e78119da2fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.0_e68660f23ed3228646cfd31108be2ce2c0bc9caa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_6d6e22a4316e47eaba4bd6ef09db3ef59f99412e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.0_61193d1c8b4fae93295d202cb0d8b54a1894d346/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_ead9088f25bf7ab9fc72ba5104d06ad4b6cf13fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.0_70dee270c1cb2d1d950a144056f1981e801e8e87/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.1.0_c03dcedd5fb199299be7868500bdc3e58f6e7612/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cf53d79db264df765c88455f3ae3dad4109069a1">
+        <dex dex="/Users/asimghafoor/Desktop/CS2001-coursework-2016-17-level-2-team-10/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8bdbd6f50dbe2d9cc9ac071ef60678d7e8cddd32/classes.dex" />
     </item>
 
 </items>

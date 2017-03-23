@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 
@@ -41,9 +42,10 @@ public class MovieArrayAdapter extends ArrayAdapter {
 
         TextView movieName = (TextView) view.findViewById(R.id.textView);
         ImageView image = (ImageView) view.findViewById(R.id.imageView);
+        TextView movieRating = (TextView) view.findViewById(R.id.textView2);
 
         movieName.setText(details.getOriginal_title());
-
+        movieRating.setText (Double.toString(details.getVote_average()*10));
 
         Glide.with(context).load("https://image.tmdb.org/t/p/w500/" + details.getPoster_path()).into(image);
 
