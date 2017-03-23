@@ -27,6 +27,15 @@ public class movieList {
         return title;
     }
     public String getRating(){
+        if(!"N/A".equals(metacriticRating)&&!"N/A".equals(imdbRating)) {
+            double rottentomates = 0.0;
+            // remove above line and replace with line below when api is fixed
+            //double rottentomates = Double.parseDouble(rottenTomatoesRating);
+            double metacritic = Double.parseDouble(metacriticRating);
+            double imdb = (Double.parseDouble(imdbRating)) * 10;
+            // change to 3 when api is fixed
+            rating = String.valueOf((int) (Math.round((rottentomates + metacritic + imdb) / 2)));
+        }
         return rating;
     }
     public String getRottenTomatoesRating(){

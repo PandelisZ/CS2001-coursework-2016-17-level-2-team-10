@@ -49,7 +49,7 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
         holder.rottenTomatoesRating.setText(movielist.getRottenTomatoesRating());
         holder.metacriticRating.setText(movielist.getMetacriticRating());
         holder.imdbRating.setText(movielist.getImdbRating());
-        
+
         Picasso.with(context)
                 .load(movielist.getPoster())
                 .resize(100, 150)
