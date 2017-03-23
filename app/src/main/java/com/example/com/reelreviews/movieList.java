@@ -1,9 +1,5 @@
 package com.example.com.reelreviews;
 
-
-
-import java.util.List;
-
 public class movieList {
     String title;
     String rating;
@@ -24,8 +20,6 @@ public class movieList {
         this.imdbID = imdbID;
         this.releaseDate = releaseDate;
     }
-
-    private List<movieList> movielist;
 
     public String getTitle(){
         return title;
@@ -52,7 +46,7 @@ public class movieList {
         metacriticRating = id;
     }
     public String getImdbRating(){
-        if(imdbRating != "N/A"){
+        if(!"N/A".equals(imdbRating)){
             double imdbDouble = Double.parseDouble(imdbRating);
             return String.valueOf((int)(imdbDouble * 10));
         }else{

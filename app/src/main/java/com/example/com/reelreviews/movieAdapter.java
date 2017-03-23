@@ -1,6 +1,5 @@
 package com.example.com.reelreviews;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -11,13 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
-import static android.support.v4.content.ContextCompat.startActivity;
 
 public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> {
 
@@ -78,7 +72,6 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
         TextView rottenTomatoesRating;
         TextView metacriticRating;
         TextView imdbRating;
-        TextView imdbID;
         ImageView poster;
         LinearLayout linearLayout;
         List<movieList> MovieList;
