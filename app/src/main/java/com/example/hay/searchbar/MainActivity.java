@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
                         movieList list = new movieList(
                                 object.getString("title"),
-                                object.getString("vote_average"),
+                                "N/A",
                                 //rottentomatoes
                                 "N/A",
                                 //metacritic
@@ -141,7 +141,9 @@ public class MainActivity extends AppCompatActivity {
         String [] dateSplit = date.split("-");
         String year = dateSplit[0];
         String URL = "http://www.omdbapi.com/?t="+title+"&y="+year;
-
+        // when rottentomatoes api is fixed, enable rotten tomatoes flag(SEE BELOW).
+        //String URL = "http://www.omdbapi.com/?t="+title+"&y="+year+"&tomatoes=true";
+        
         Response.Listener<String> listener = new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
