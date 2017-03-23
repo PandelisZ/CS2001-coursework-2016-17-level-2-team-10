@@ -1,7 +1,5 @@
 package com.example.hay.searchbar;
 
-import java.util.List;
-
 public class movieList {
     String title;
     String rating;
