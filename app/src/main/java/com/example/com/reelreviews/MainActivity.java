@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.SearchView;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView listView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 //Executing AsyncTask, passing api as parameter
         new CheckConnectionStatus().execute("https://api.themoviedb.org/3/movie/popular?api_key=b100be8111f00affe3773ea55d4b47d3&language=en-US&page=1");
+
+        openSearchPage();
     }
 
     //This method is invoked whenever we click over any item of list
@@ -281,5 +287,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public interface ImdbAsyncResponse {
 
         void getImdbId(String imdbID);
+    }
+
+    public void openSearchPage(){
+        Button searchView = (Button) findViewById(R.id.search_bar);
+        searchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, searchPage.class));
+            }
+        });
     }
 }

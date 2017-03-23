@@ -51,6 +51,7 @@ public class IndividualPage extends AppCompatActivity implements YouTubePlayer.O
         MovieDetails details = (MovieDetails) getIntent().getExtras().getSerializable("MOVIE_DETAILS");
 
         tmdbId = details.getImdb_id();
+
         //Imdb id
         imdbID = tmdbId   ;
         //Query URL that is used to get the youtube video id

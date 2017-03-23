@@ -25,14 +25,17 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <SearchView
+        <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/search_bar"
             android:background="@drawable/border"
             android:layout_below="@+id/logo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:text="Click me to search"
+            android:textColor="#d3d3d3"
+            />
 
         <ImageView
             android:layout_width="150dp"
