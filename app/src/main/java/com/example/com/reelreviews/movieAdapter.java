@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import java.util.List;
 
 public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> {
@@ -49,13 +50,10 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
         holder.rottenTomatoesRating.setText(movielist.getRottenTomatoesRating());
         holder.metacriticRating.setText(movielist.getMetacriticRating());
         holder.imdbRating.setText(movielist.getImdbRating());
-
-        Picasso.with(context)
+        Glide.with(context)
                 .load(movielist.getPoster())
-                .resize(100, 150)
-                .skipMemoryCache()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.poster);
-
     }
 
     @Override

@@ -102,29 +102,6 @@ public class searchPage extends AppCompatActivity {
         requestQueue.add(request);
     }
 
-    public void getIMDBID(movieList list1) {
-        final movieList list = list1;
-        String id = list.getimdbID();
-        String URL = "https://api.themoviedb.org/3/movie/"+id+"?api_key=4acd02f362b8c19c39b89f7c765d105c";
-
-        Response.Listener<String> listener = new Response.Listener<String>(){
-            @Override
-            public void onResponse(String response) {
-                try{
-                    JSONObject jsonResponse = new JSONObject(response);
-                    list.setimdbID(jsonResponse.getString("imdb_id"));
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        list1.setimdbID(list.getimdbID());
-        search_request_imdbID requestID = new search_request_imdbID(URL,listener);
-        RequestQueue queue = Volley.newRequestQueue(this);
-        requestID.setShouldCache(true);
-        queue.add(requestID);
-    }
     public void getMovieRatings(final movieList list){
         String title = list.getTitle();
         String date = list.getReleaseDate();
