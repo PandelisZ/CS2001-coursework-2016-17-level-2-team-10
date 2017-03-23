@@ -147,8 +147,14 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 try{
                     JSONObject jsonResponse = new JSONObject(response);
+                    // add the line below when rottentomatoes api is fixed
+                    //list.setRottenTomatoesRating(jsonResponse.getString("tomatoRating"));
+                    if(!"N/A".equals(jsonResponse.getString("Metascore"))){
                         list.setMetacriticRating(jsonResponse.getString("Metascore"));
+                    }
+                    if(!"N/A".equals(jsonResponse.getString("imdbRating"))){
                         list.setImdbRating(jsonResponse.getString("imdbRating"));
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
