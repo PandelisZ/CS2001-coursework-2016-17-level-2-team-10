@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private List<movieList> MovieList;
     private movieAdapter adapter;
     private String movie;
-    //private static final String Search_Request_URL = "https://api.themoviedb.org/3/search/movie";
     final String url = "https://image.tmdb.org/t/p/w154/";
     final String api_key="4acd02f362b8c19c39b89f7c765d105c";
 
@@ -95,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("id"),
                                 object.getString("release_date")
                         );
+                        getIMDBID(list);
                         MovieList.add(list);
                     }
                     adapter = new movieAdapter(MovieList,getApplicationContext());
@@ -105,11 +105,32 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        // MovieList.add(new movieList("The Avengers", "7.4","2012-04-25","https://image.tmdb.org/t/p/w154/cezWGskPY5x7GaglTTRN4Fugfb8.jpg"));
-        // MovieList.add(new movieList("Avengers: Age of Ultron", "7.4", "2015-05-01", "t90Y3G8UGQp0f0DrP60wRu9gfrH.jpg"));
         search_request request = new search_request(api_key,movie,responseListener);
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
         request.setShouldCache(false);
         queue.add(request);
+    }
+    public void getIMDBID(movieList list1) {
+        final movieList list = list1;
+        String id = list.getimdbID();
+        String URL = "https://api.themoviedb.org/3/movie/"+id+"?api_key=4acd02f362b8c19c39b89f7c765d105c";
+
+        Response.Listener<String> listener = new Response.Listener<String>(){
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonResponse = new JSONObject(response);
+                    list.setimdbID(jsonResponse.getString("imdb_id"));
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        list1.setimdbID(list.getimdbID());
+        search_request_imdbID requestID = new search_request_imdbID(URL,listener);
+        RequestQueue queue = Volley.newRequestQueue(this);
+        requestID.setShouldCache(true);
+        queue.add(requestID);
     }
 }
