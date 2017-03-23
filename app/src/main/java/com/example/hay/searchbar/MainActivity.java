@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("release_date")
                         );
                         getIMDBID(list);
+                        getMovieRatings(list);
                         MovieList.add(list);
                     }
                     adapter = new movieAdapter(MovieList,getApplicationContext());
@@ -132,5 +133,31 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         requestID.setShouldCache(true);
         queue.add(requestID);
+    }
+
+    public void getMovieRatings(final movieList list){
+        String title = list.getTitle();
+        String date = list.getReleaseDate();
+        String [] dateSplit = date.split("-");
+        String year = dateSplit[0];
+        String URL = "http://www.omdbapi.com/?t="+title+"&y="+year;
+
+        Response.Listener<String> listener = new Response.Listener<String>(){
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonResponse = new JSONObject(response);
+                        list.setMetacriticRating(jsonResponse.getString("Metascore"));
+                        list.setImdbRating(jsonResponse.getString("imdbRating"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        };
+        search_request_reviews requestReviews = new search_request_reviews(URL,listener);
+        RequestQueue queue = Volley.newRequestQueue(this);
+        requestReviews.setShouldCache(false);
+        queue.add(requestReviews);
     }
 }
