@@ -39,8 +39,8 @@ public class MovieArrayAdapter extends ArrayAdapter {
         MovieDetails details = movieDetailsList.get(position);
         View view = LayoutInflater.from(context).inflate(resource, parent, false);
 
-        double d = Double.valueOf(details.getVote_average()*10);
-        int reelrating = (int) d;
+        double rating = Double.valueOf(details.getVote_average()*10);
+        int reelrating = (int) rating;
         TextView movieRating = (TextView) view.findViewById(R.id.textView2);
         movieRating.setText(String.valueOf( (int) reelrating));
 
