@@ -20,26 +20,19 @@
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
         android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/imageView"
         android:layout_toEndOf="@+id/imageView"
-        android:layout_marginTop="11dp" />
+        android:textSize="16sp"/>
 
     <TextView
         android:text="TextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
+        android:layout_marginBottom="26dp"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="26dp" />
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:textSize="16sp"/>
 
     <TextView
         android:text=" %"
@@ -49,7 +42,19 @@
         android:layout_alignBaseline="@+id/textView2"
         android:layout_alignBottom="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_toEndOf="@+id/textView2"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
 
 </RelativeLayout>
